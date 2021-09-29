@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/hello-world-sth-sth-else/static/css/main.cd8d2ff1.chunk.css",
+    "main.js": "/hello-world-sth-sth-else/static/js/main.40630d71.chunk.js",
+    "main.js.map": "/hello-world-sth-sth-else/static/js/main.40630d71.chunk.js.map",
+    "runtime-main.js": "/hello-world-sth-sth-else/static/js/runtime-main.5341504a.js",
+    "runtime-main.js.map": "/hello-world-sth-sth-else/static/js/runtime-main.5341504a.js.map",
+    "static/js/2.307c6e28.chunk.js": "/hello-world-sth-sth-else/static/js/2.307c6e28.chunk.js",
+    "static/js/2.307c6e28.chunk.js.map": "/hello-world-sth-sth-else/static/js/2.307c6e28.chunk.js.map",
+    "static/js/3.79a3f0ad.chunk.js": "/hello-world-sth-sth-else/static/js/3.79a3f0ad.chunk.js",
+    "static/js/3.79a3f0ad.chunk.js.map": "/hello-world-sth-sth-else/static/js/3.79a3f0ad.chunk.js.map",
+    "index.html": "/hello-world-sth-sth-else/index.html",
+    "static/css/main.cd8d2ff1.chunk.css.map": "/hello-world-sth-sth-else/static/css/main.cd8d2ff1.chunk.css.map",
+    "static/js/2.307c6e28.chunk.js.LICENSE.txt": "/hello-world-sth-sth-else/static/js/2.307c6e28.chunk.js.LICENSE.txt",
+    "static/media/Annoying_Alarm_Clock-UncleKornicob-420925725.362b0101.mp3": "/hello-world-sth-sth-else/static/media/Annoying_Alarm_Clock-UncleKornicob-420925725.362b0101.mp3",
+    "static/media/App.css": "/hello-world-sth-sth-else/static/media/digital-7.93911ab1.ttf",
+    "static/media/ibs.c5da571f.svg": "/hello-world-sth-sth-else/static/media/ibs.c5da571f.svg",
+    "static/media/logo.6ce24c58.svg": "/hello-world-sth-sth-else/static/media/logo.6ce24c58.svg",
+    "static/media/timeout.cadcca3f.gif": "/hello-world-sth-sth-else/static/media/timeout.cadcca3f.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5341504a.js",
+    "static/js/2.307c6e28.chunk.js",
+    "static/css/main.cd8d2ff1.chunk.css",
+    "static/js/main.40630d71.chunk.js"
+  ]
+}
