@@ -234,3 +234,351 @@ const javaScriptTest = [
         answer:""
       },
 ]
+
+
+
+const anotherJS = [
+  {
+    question: "What are variables used for in JavaScript Programs?",
+    options: [
+        "Storing numbers, dates, or other values",
+        "Varying randomly",
+        "Causing high-school algebra flashbacks",
+        "None of the above",
+    ],
+    answer:"Storing numbers, dates, or other values"
+  },
+  {
+    question: "Which of the following can’t be done with client-side JavaScript?",
+    options: [
+        "Validating a form",
+        "Sending a form’s contents by email",
+        "Storing the form’s contents to a database file on the server",
+        "None of the above",
+    ],
+    answer:"Storing the form’s contents to a database file on the server"
+  },
+  {
+    question: "Which of the following are capabilities of functions in JavaScript?",
+    options: [
+        "Return a value",
+        "Accept parameters and Return a value",
+        "Accept parameters",
+        "None of the above",
+    ],
+    answer:"Accept parameters"
+  },
+  {
+    question: "Which of the following is not a valid JavaScript variable name?",
+    options: [
+        "2names",
+        "_first_and_last_names",
+        "firstAndLast",
+        "None of the above",
+    ],
+    answer:"2names"
+  },
+  {
+    question: "______ tag is an extension to HTML that can enclose any number of JavaScript statements.",
+    options: [
+        "<SCRIPT>",
+        "<BODY>",
+        "<HEAD>",
+        "<TITLE>",
+    ],
+    answer:"<SCRIPT>"
+  },
+  {
+    question: "How does JavaScript store dates in a date object?",
+    options: [
+        "The number of milliseconds since January 1st, 1970",
+        "The number of days since January 1st, 1900",
+        "The number of seconds since Netscape’s public stock offering.",
+        "None of the above",
+    ],
+    answer:"The number of milliseconds since January 1st, 1970"
+  },
+  {
+    question: "What is the correct JavaScript syntax to write “Hello World”?",
+    options: [
+        "System.out.println(“Hello World”)",
+        "println (“Hello World”)",
+        "document.write(“Hello World”)",
+        "response.write(“Hello World”)",
+    ],
+    answer:"document.write(“Hello World”)"
+  },
+  {
+    question: "Inside which HTML element do we put the JavaScript?",
+    options: [
+        "<js>",
+        "<scripting>",
+        "<script>",
+        "<javascript>",
+    ],
+    answer:"<script>"
+  },
+  {
+    question: "What is the correct syntax for referring to an external script called ” abc.js”?",
+    options: [
+        "<script href=” abc.js”>",
+        "<script name=” abc.js”>",
+        "<script src=” abc.js”>",
+        "None of the above",
+    ],
+    answer:"<script src=” abc.js”>"
+  },
+  {
+    question: "Which is the correct way to write a JavaScript array?",
+    options: [
+        "var txt = new Array(1:”tim”,2:”kim”,3:”jim”)",
+        "var txt = new Array:1=(“tim”)2=(“kim”)3=(“jim”)",
+        "var txt = new Array(“tim”,”kim”,”jim”)",
+        "var txt = new Array=”tim”,”kim”,”jim”",
+    ],
+    answer:"var txt = new Array(“tim”,”kim”,”jim”)"
+  },
+  {
+    question: "If para1 is the DOM object for a paragraph, what is the correct syntax to change the text within the paragraph?",
+    options: [
+        "“New Text”?",
+        "para1.value=”New Text”;",
+        "para1.firstChild.nodeValue= “New Text”;",
+        "para1.nodeValue=”New Text”;",
+    ],
+    answer:"para1.value=”New Text”;"
+  },
+  {
+    question: "JavaScript entities start with _______ and end with _________.",
+    options: [
+        "Semicolon, colon",
+        "Semicolon, Ampersand",
+        "Ampersand, colon",
+        "Ampersand, semicolon",
+    ],
+    answer:"Ampersand, semicolon"
+  },
+  {
+    question: "Which of the following event fires when the form element loses the focus: <button>, <input>, <label>, <select>, <textarea>?",
+    options: [
+        "onfocus",
+        "onblur",
+        "onclick",
+        "ondblclick",
+    ],
+    answer:"onblur"
+  },
+  {
+    question: "Using _______ statement is how you test for a specific condition.",
+    options: [
+        "Select",
+        "If",
+        "Switch",
+        "For",
+    ],
+    answer:"If"
+  },
+  {
+    question: "How to create a Date object in JavaScript?",
+    options: [
+        "dateObjectName = new Date([parameters])",
+        "dateObjectName.new Date([parameters])",
+        "dateObjectName := new Date([parameters])",
+        "dateObjectName Date([parameters])",
+    ],
+    answer:"dateObjectName = new Date([parameters])"
+  },
+  {
+    question: "The _______ method of an Array object adds and/or removes elements from an array.",
+    options: [
+        "Reverse",
+        "Shift",
+        "Slice",
+        "Splice",
+    ],
+    answer:"Splice"
+  },
+  {
+    question: "<script type=”text/javascript”>"+
+    "x=4+”4″;"+
+    "document.write(x);"+
+    "</script>",
+    options: [
+        "44",
+        "8",
+        "4",
+        "error",
+    ],
+    answer:"44"
+  },
+  {
+    question: "What is mean by “this” keyword in javascript?",
+    options: [
+        "It refers current object",
+        "It referes previous object",
+        "It is variable which contains value",
+        "None of the above",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+  {
+    question: "",
+    options: [
+        "",
+        "",
+        "",
+        "",
+    ],
+    answer:""
+  },
+]

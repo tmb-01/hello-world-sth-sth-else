@@ -21,6 +21,7 @@ import { baseLink } from "../../baselink/baselink";
 import QuizPage from "../quizPage";
 import {BrowserRouter,Switch,Route} from "react-router-dom"
 import AddQuizPage from "../addQuizPage";
+import QuizUsers from "../quizUsersPage";
 
 function MainPage() {
   return (
@@ -31,6 +32,9 @@ function MainPage() {
             </Route>
             <Route path="/add-quiz">
                 {/* <AddQuizPage/> */}
+            </Route>
+            <Route path="/quiz-users-page">
+                {/* <QuizUsers/> */}
             </Route>
         </Switch>
     </BrowserRouter>

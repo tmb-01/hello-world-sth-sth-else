@@ -31,22 +31,22 @@ function AddQuizPage() {
   console.log(css, cssTest);
 
   const sendQuiz = (data) => {
+    console.log(data);
     axios({
       method: "POST",
       data: data,
-      url:`${baseLink}/quiz`,
+      url: `${baseLink}/quiz`,
       headers: {
         Authorization:
           "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcGFjZV9hY2FkZW15IiwiaWF0IjoxNjMxNzg4MTAzLCJleHAiOjE2NjMzMjQxMDN9.Rs9VPFUNbhgrMnTV-Urtd7Z5E0NJhQc1sMA_NbgmNNsWockKinNo7j-TrGlzl5_Q-HNf4b2fXarbzUx3ZVXk9w",
       },
     })
-    .then((res)=>{
-      console.log(res);
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
-    ;
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -54,11 +54,12 @@ function AddQuizPage() {
       <h1>
         {html.quizPayload.length} {html.category}
       </h1>
-      <button onClick={()=>sendQuiz(html)}>html</button>
-      <button onClick={()=>sendQuiz(css)}>css</button>
+      <button onClick={() => sendQuiz(html)}>html</button>
+      <button onClick={() => sendQuiz(css)}>css</button>
+      <button onClick={() => sendQuiz(javaScript)}>JavaScript</button>
 
-      {html.quizPayload.map(({ question, answer, options }, index) => (
-        <>
+      {/* {html.quizPayload.map(({id, question, answer, options }, index) => (
+        <React.Fragment key={id}>
           <h3>
             {index + 1}) {question}
           </h3>
@@ -68,7 +69,7 @@ function AddQuizPage() {
             ))}
             <b>{answer === "" ? "EMPTY" : answer}</b>
           </ul>
-        </>
+        </React.Fragment>
       ))}
 
       <h1>
@@ -86,7 +87,7 @@ function AddQuizPage() {
             <b>{answer === "" ? "EMPTY" : answer}</b>
           </ul>
         </>
-      ))}
+      ))} */}
 
       <h1>
         {javaScript.quizPayload.length} {javaScript.category}
@@ -101,6 +102,7 @@ function AddQuizPage() {
             {options.map((value) => (
               <li>{value}</li>
             ))}
+            {/* <b>{options.contains(answer)}</b> */}
             <b>{answer === "" ? "EMPTY" : answer}</b>
           </ul>
         </>

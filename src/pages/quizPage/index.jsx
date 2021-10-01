@@ -164,8 +164,8 @@ function QuizPage() {
             {`${fullName.data.firstName} ${fullName.data.lastName}`}
           </FullName>
           <TestWrapper>
-            <h1>HTML</h1>
-            {tests
+            {/* <h1>HTML</h1> */}
+            {/* {tests
               .filter(({ quizCategory }) => {
                 console.log(quizCategory.category);
                 return quizCategory.category === "HTML";
@@ -199,6 +199,34 @@ function QuizPage() {
               ?.map(
                 ({ id, question, quizCategory, options, answer }, index) => {
                   if (index < 20) {
+                    return (
+                      <TestBox key={id}>
+                        <Question>
+                          {index + 1}) {question}
+                        </Question>
+                        {options.map(({ id: choiceId, choice }) => (
+                          <Option key={choiceId}>
+                            <input
+                              onChange={handleAnswer}
+                              type="radio"
+                              name={id}
+                              value={choiceId}
+                            />{" "}
+                            {choice}
+                          </Option>
+                        ))}
+                      </TestBox>
+                    );
+                  }
+                }
+              )}
+            <hr /> */}
+            <h1>JavaScript</h1>
+            {tests
+              ?.filter(({ quizCategory }) => quizCategory.category === "Java Script")
+              ?.map(
+                ({ id, question, quizCategory, options, answer }, index) => {
+                  if (index < 50) {
                     return (
                       <TestBox key={id}>
                         <Question>
