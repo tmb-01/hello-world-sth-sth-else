@@ -221,9 +221,65 @@ function QuizPage() {
                 }
               )}
             <hr /> */}
-            <h1>JavaScript</h1>
+            {/* <h1>JavaScript</h1>
             {tests
               ?.filter(({ quizCategory }) => quizCategory.category === "Java Script")
+              ?.map(
+                ({ id, question, quizCategory, options, answer }, index) => {
+                  if (index < 50) {
+                    return (
+                      <TestBox key={id}>
+                        <Question>
+                          {index + 1}) {question}
+                        </Question>
+                        {options.map(({ id: choiceId, choice }) => (
+                          <Option key={choiceId}>
+                            <input
+                              onChange={handleAnswer}
+                              type="radio"
+                              name={id}
+                              value={choiceId}
+                            />{" "}
+                            {choice}
+                          </Option>
+                        ))}
+                      </TestBox>
+                    );
+                  }
+                }
+              )} */}
+
+            <h1>React</h1>
+            {tests
+              ?.filter(({ quizCategory }) => quizCategory.category === "React")
+              ?.map(
+                ({ id, question, quizCategory, options, answer }, index) => {
+                  if (index < 30) {
+                    return (
+                      <TestBox key={id}>
+                        <Question>
+                          {index + 1}) {question}
+                        </Question>
+                        {options.map(({ id: choiceId, choice }) => (
+                          <Option key={choiceId}>
+                            <input
+                              onChange={handleAnswer}
+                              type="radio"
+                              name={id}
+                              value={choiceId}
+                            />{" "}
+                            {choice}
+                          </Option>
+                        ))}
+                      </TestBox>
+                    );
+                  }
+                }
+              )}
+
+<h1>Redux</h1>
+            {tests
+              ?.filter(({ quizCategory }) => quizCategory.category === "Redux")
               ?.map(
                 ({ id, question, quizCategory, options, answer }, index) => {
                   if (index < 50) {

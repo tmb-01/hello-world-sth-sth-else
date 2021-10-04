@@ -5,6 +5,7 @@ import { cssTest } from "../../quizzes/css_uz";
 import { htmlTest } from "../../quizzes/html_uz";
 import { javaScriptTest } from "../../quizzes/javaScript_uz";
 import { reactTest } from "../../quizzes/react_uz";
+import { reduxTest } from "../../quizzes/react_uz";
 import axios from "axios";
 import { baseLink } from "../../baselink/baselink";
 
@@ -27,6 +28,10 @@ function AddQuizPage() {
   const react = {
     category: "React",
     quizPayload: reactTest,
+  };
+  const redux = {
+    category: "Redux",
+    quizPayload: reduxTest,
   };
   console.log(css, cssTest);
 
@@ -51,12 +56,14 @@ function AddQuizPage() {
 
   return (
     <Container>
-      <h1>
+      {/* <h1>
         {html.quizPayload.length} {html.category}
-      </h1>
+      </h1> */}
       <button onClick={() => sendQuiz(html)}>html</button>
       <button onClick={() => sendQuiz(css)}>css</button>
       <button onClick={() => sendQuiz(javaScript)}>JavaScript</button>
+      <button onClick={() => sendQuiz(react)}>React</button>
+      <button onClick={() => sendQuiz(redux)}>Redux</button>
 
       {/* {html.quizPayload.map(({id, question, answer, options }, index) => (
         <React.Fragment key={id}>
@@ -89,7 +96,7 @@ function AddQuizPage() {
         </>
       ))} */}
 
-      <h1>
+      {/* <h1>
         {javaScript.quizPayload.length} {javaScript.category}
       </h1>
 
@@ -102,11 +109,11 @@ function AddQuizPage() {
             {options.map((value) => (
               <li>{value}</li>
             ))}
-            {/* <b>{options.contains(answer)}</b> */}
+             <b>{options.contains(answer)}</b>
             <b>{answer === "" ? "EMPTY" : answer}</b>
           </ul>
         </>
-      ))}
+      ))} */}
 
       <h1>
         {react.quizPayload.length} {react.category}
@@ -120,7 +127,7 @@ function AddQuizPage() {
             {options.map((value) => (
               <li>{value}</li>
             ))}
-            <b>{answer === "" ? "EMPTY" : answer}</b>
+            <b style={(answer==="")?{color:'red'}:{}}>{answer === "" ? "EMPTY" : answer}</b>
           </ul>
         </>
       ))}

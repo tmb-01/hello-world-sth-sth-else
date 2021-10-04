@@ -6,6 +6,7 @@ function QuizUsers() {
   const [users, setUsers] = useState([]);
 
   const getUsers = () => {
+    console.log("get users loading");
     axios({
       method: "GET",
       url: `${baseLink}/quiz/quiz-users`,

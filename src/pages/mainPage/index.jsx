@@ -31,10 +31,10 @@ function MainPage() {
             <QuizPage />
             </Route>
             <Route path="/add-quiz">
-                {/* <AddQuizPage/> */}
+                <AddQuizPage/>
             </Route>
             <Route path="/quiz-users-page">
-                {/* <QuizUsers/> */}
+                <QuizUsers/>
             </Route>
         </Switch>
     </BrowserRouter>

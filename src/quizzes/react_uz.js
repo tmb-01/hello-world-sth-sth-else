@@ -2,17 +2,17 @@ export const reactTest = [
   {
     question: "Reactni qaysi kompaniya chiqargan?",
     options: ["Facebook", "Microsoft", "Apple", "Google"],
-    answer: "",
+    answer: "Facebook",
   },
-  // {
-  //   question: "What does DOM stand for?",
-  //   options: [
-  //     "Document Object Model",
-  //     "Document Order Management",
-  //     "Directional Object Maker",
-  //   ],
-  //   answer: "",
-  // },
+  {
+    question: "DOM qaysi so'zlardan tashkil topgan?",
+    options: [
+      "Document Object Model",
+      "Document Order Management",
+      "Directional Object Maker",
+    ],
+    answer: "Document Object Model",
+  },
   // {
   //   question: "Where in the HTML document should you put the script tags?",
   //   options: [
@@ -38,7 +38,7 @@ export const reactTest = [
   {
     question: "index.html fayli reactni qaysi papkasida turadi?",
     options: ["src", "readme", "package.json", "public"],
-    answer: "",
+    answer: "public",
   },
   // {
   //   question: "ReactDOM.render is which of the following:",
@@ -58,17 +58,17 @@ export const reactTest = [
       "src/App.js",
       "public/index.html",
     ],
-    answer: "",
+    answer: "package.json",
   },
   {
     question: "Qaysi biri bizni kompyuterimizni bildiradi?",
     options: ["localserver", "host", "hostserver", "localhost"],
-    answer: "",
+    answer: "localhost",
   },
   {
     question: "JSX ichida JavaScript kodlarini nima ichiqa yozamiz?",
     options: ["Square brackets []", "Parentheses ()", "Curly braces {}"],
-    answer: "",
+    answer: "Curly braces {}",
   },
   // {
   //   question: "DOM represents the page as a:",
@@ -97,29 +97,29 @@ export const reactTest = [
       "\tdocument.getElementById('root')\n" +
       ");\n",
     options: ["AX", "X", "A", "AA"],
-    answer: "",
+    answer: "AX",
   },
   {
     question:
       "Biza kompanentni boshqa kompanentlar ichida xoxlaganimizcha chaqirishimiz mumkun.",
     options: ["❌ Xato", "✅ Tug'ri"],
-    answer: "",
+    answer: "✅ Tug'ri",
   },
-  // {
-  //   question: "How did we apply CSS styles to the Item elements?",
-  //   options: ["using a CSS class", "using the root container", "using an ID"],
-  //   answer: "",
-  // },
+  {
+    question: "CSS stilllarini elementga nima orqali beramiz?",
+    options: ["CSS classlar orqali", "root container orqali", "ID orqali"],
+    answer: "CSS classlar orqali",
+  },
   {
     question:
       "Agar kompanentni state-i uzgarsa tuliq sahifa boshqatdan yuklanadi.",
     options: ["❌ Xato", "✅ Tug'ri"],
-    answer: "",
+    answer: "❌ Xato",
   },
   {
     question: "useState()-ni biza class kompanentdaham ishlatishimiz mumkun.",
     options: ["❌ Xato", "✅ Tug'ri"],
-    answer: "",
+    answer: "❌ Xato",
   },
   {
     question:
@@ -134,20 +134,20 @@ export const reactTest = [
       "\t}\n" +
       "}",
     options: ["undefined", "6", "3", "0"],
-    answer: "",
+    answer: "3",
   },
   {
     question:
       "Quyidagi tugmani 3 marta bosganimda val nimaga teng bup qoladi?\n\n" +
       "function Toggle() {\n" +
-      'const [val, setVal] = useState("ON");\n' +
-      "function toggle() {\n" +
-      'setVal((val=="ON")?"OFF":"ON");\n' +
-      "}\n" +
-      "return <button onClick={toggle}>{val}</button>;\n" +
+      '\tconst [val, setVal] = useState("ON");\n' +
+      "\tfunction toggle() {\n" +
+      '\t\tsetVal((val=="ON")?"OFF":"ON");\n' +
+      "\t}\n" +
+      "\treturn <button onClick={toggle}>{val}</button>;\n" +
       "}",
     options: ["toggle", "OFF", "ON", "undefined"],
-    answer: "",
+    answer: "OFF",
   },
   // {
   //   question: "What do we use to store the form values?",
@@ -161,17 +161,13 @@ export const reactTest = [
       "const res = arr.map(x => x * 3);\n" +
       "console.log(res[1]);\n",
     options: ["4", "9", "6", "1"],
-    answer: "",
+    answer: "9",
   },
-  // {
-  //   question: "How can data flow in React?",
-  //   options: [
-  //     "From parent component to child component",
-  //     "From child component to parent component",
-  //     "From both parent to child and from child to parent",
-  //   ],
-  //   answer: "",
-  // },
+  {
+    question: "class atribuniti Reactda qanaqasiga yozamiz?",
+    options: ["class", "classAttribute", "className", "ClassName"],
+    answer: "className",
+  },
   {
     question:
       "<Child doStuff={calculate} />\n" +
@@ -182,12 +178,12 @@ export const reactTest = [
       "props.doStuff()",
       "props.child()",
     ],
-    answer: "",
+    answer: "props.doStuff()",
   },
   {
     question: "Ota kompanentdan bola kompanentga nima orqali malumot beramiz?",
     options: ["handlers", "classes", "state", "props"],
-    answer: "",
+    answer: "props",
   },
   // {
   //   question:
@@ -202,56 +198,9 @@ export const reactTest = [
   //   answer: "",
   // },
   {
-    question: "Reduxni Angulardaham ishlatish mumkun.",
-    options: ["❌ Xato", "✅ Tug'ri"],
-    answer: "",
-  },
-  // {
-  //   question: "The store is a(n):",
-  //   options: ["object", "array", "function", "class"],
-  //   answer: "",
-  // },
-  // {
-  //   question:
-  //     "Which of the following is an attribute describing a pure function?",
-  //   options: [
-  //     "A function that does not change its input parameters",
-  //     "A function that returns null",
-  //     "A function that changes the input parameters",
-  //   ],
-  //   answer: "",
-  // },
-  // {
-  //   question: "The default case is used to:",
-  //   options: [
-  //     "return a pure function",
-  //     "handle unknown actions",
-  //     "clear the state",
-  //     "handle state changes",
-  //   ],
-  //   answer: "",
-  // },
-  // {
-  //   question:
-  //     "When a component is connected to the store, the store properties can be accessed using:",
-  //   options: ["functions", "props", "handlers", "classes"],
-  //   answer: "",
-  // },
-  {
-    question: "Quyidagilarni qaysi biri action obyektida muhim?",
-    options: ["type", "class", "literal", "function"],
-    answer: "",
-  },
-  // {
-  //   question:
-  //     "Which of the following is used for selecting the part of the data from the store that the connected component needs?",
-  //   options: ["mapStateToProps", "action", "reducer", "mapDispatchToProps"],
-  //   answer: "",
-  // },
-  {
     question: "React asosan ___ -larni ishlab chiqarishga yasalgan.",
     options: ["Database", "Connectivity", "User interface", "Design Platform"],
-    answer: "",
+    answer: "User interface",
   },
   // {
   //   question: "The lifecycle methods are mainly used for ___.",
@@ -278,7 +227,7 @@ export const reactTest = [
       "<h1>{fetch}</h1>",
       "<h1>${fetch}</h1>",
     ],
-    answer: "",
+    answer: "<h1>{fetch()}</h1>",
   },
   // {
   //   question:
@@ -294,7 +243,7 @@ export const reactTest = [
   {
     question: "Tashqaridan komponentga nima orqali malumot berish mumkun?",
     options: ["setState", "render with arguments", "PropTypes", "props"],
-    answer: "",
+    answer: "props",
   },
   {
     question:
@@ -305,7 +254,7 @@ export const reactTest = [
       "componentMounted",
       "componentUpdated",
     ],
-    answer: "",
+    answer: "componentDidMount",
   },
   {
     question: "Qaysi qatorda onClick eventi tug'ri yozilgan?",
@@ -315,7 +264,7 @@ export const reactTest = [
       "<button onClick={this.foo()}>",
       "<button onClick={this.foo}>",
     ],
-    answer: "",
+    answer: "<button onClick={this.foo}>",
   },
   // {
   //   question: "What will happen if you call setState() inside render() method?",
@@ -335,7 +284,7 @@ export const reactTest = [
       "style={fontSize:'12px',color:'red'}",
       "style={{font-size:12px,color:'red'}}",
     ],
-    answer: "",
+    answer: "style={{fontSize:'12px',color:'red'}}",
   },
   // {
   //   question: "What advantages does ReactJS have?",
@@ -348,14 +297,11 @@ export const reactTest = [
   //   ],
   //   answer: "",
   // },
-  // {
-  //   question: "What is state in React?",
-  //   options: [
-  //     "A persistant storage.",
-  //     "An internal data store (object) of a component.",
-  //   ],
-  //   answer: "",
-  // },
+  {
+    question: "Reactda state nima?",
+    options: ["Doimiy xotira", "Komponentning ichki xotirasi"],
+    answer: "Komponentning ichki xotirasi",
+  },
   {
     question: "ReactJS nima?",
     options: [
@@ -363,12 +309,12 @@ export const reactTest = [
       "User-interface yasash uchun kutubxona",
       "Database kitubxonasi",
     ],
-    answer: "",
+    answer: "User-interface yasash uchun kutubxona",
   },
   {
     question: "Quyidagilarni qaysi biri malumotlar bilan ishlaydi?",
     options: ["state & props", "services & components"],
-    answer: "",
+    answer: "state & props",
   },
   // {
   //   question: "What disadvantages does ReactJS have?",
@@ -393,7 +339,7 @@ export const reactTest = [
   {
     question: "Reactda stateni nima bilan uzgartiramiz?",
     options: ["setState()", "State()"],
-    answer: "",
+    answer: "setState()",
   },
   // {
   //   question: "The arbitrary inputs of components are called ___.",
@@ -414,12 +360,131 @@ export const reactTest = [
       "componentDidUnmount",
       "Hammasi",
     ],
-    answer: "",
+    answer: "Hammasi",
   },
   {
     question:
       "map bilan loop qiganda xatolik bermasligi uchun tegning qaysi atribyutga unik malumot berishimiz kerak?",
     options: ["key", "unique", "map", "loop"],
-    answer: "",
+    answer: "key",
+  },
+  {
+    question:
+      "formda sahifa update bulasligi uchun qaysi metodni chaqirishimiz kerak?",
+    options: ["default", "dontUpdate", "reset", "preventDefault"],
+    answer: "preventDefault",
+  },
+  {
+    question: "Hookni biza class componentdaham ishlatishimiz mumkun?",
+    options: ["✅ Tug'ri", "❌ Xato"],
+    answer: "❌ Xato",
+  },
+  {
+    question:
+      "useStateni ishlatmoqchi busak biza uni import qilishimiz shart emas",
+    options: ["✅ Tug'ri", "❌ Xato"],
+    answer: "❌ Xato",
+  },
+  {
+    question: "Reactda qanaqasiga komment quyish mumkun",
+    options: [
+      "<!--This is a comment-->",
+      "{/* This is a comment */}",
+      "'This is a comment",
+      "//This is a comment",
+    ],
+    answer: "{/* This is a comment */}",
+  },
+];
+
+export const reduxTest = [
+  {
+    question: "Redux nima?",
+    options: [
+      "Redux bu javaScript state managementi",
+      "Redux bu javaScript",
+      "Redux bu faqat React kutubxonasi",
+    ],
+    answer: "Redux bu javaScript state managementi",
+  },
+  {
+    question: "Reduxni Angulardaham ishlatish mumkun.",
+    options: ["❌ Xato", "✅ Tug'ri"],
+    answer: "✅ Tug'ri",
+  },
+  {
+    question: "Reduxda action nima qaytaradi?",
+    options: ["number", "object", "function", "class"],
+    answer: "object",
+  },
+  {
+    question: "Store bu ...",
+    options: ["object", "array", "function", "class"],
+    answer: "object",
+  },
+  // {
+  //   question:
+  //     "Which of the following is an attribute describing a pure function?",
+  //   options: [
+  //     "A function that does not change its input parameters",
+  //     "A function that returns null",
+  //     "A function that changes the input parameters",
+  //   ],
+  //   answer: "",
+  // },
+  // {
+  //   question: "The default case is used to:",
+  //   options: [
+  //     "return a pure function",
+  //     "handle unknown actions",
+  //     "clear the state",
+  //     "handle state changes",
+  //   ],
+  //   answer: "",
+  // },
+  {
+    question: "Store ichidagi malumotni qaysi hook orqali olamiz:",
+    options: ["state", "useState", "useDispatch", "useSelector"],
+    answer: "useSelector",
+  },
+  {
+    question: "Quyidagilarni qaysi biri action obyektida muhim?",
+    options: ["type", "class", "literal", "function"],
+    answer: "type",
+  },
+  {
+    question:
+      "Agar reducerlarimiz kupayib ketsa ularni qaysi funksiya ichiga olishimiz kerak?",
+    options: [
+      "combineReducers()",
+      "combineReducer()",
+      "combine()",
+      "reducers()",
+    ],
+    answer: "combineReducers()",
+  },
+  {
+    question: "Reduxda middlewareni qanaqasiga qushish mumkun?",
+    options: [
+      "applyMiddleware(logger)",
+      "reduxApply(logger)",
+      "middleware(logger)",
+      "redux(logger)",
+    ],
+    answer: "applyMiddleware(logger)",
+  },
+  {
+    question: "Logger, Thunk and Promise -larni reduxda nima diyiladi?",
+    options: ["middleware", "action", "reducer", "store"],
+    answer: "middleware",
+  },
+  {
+    question: "Reducer nima?",
+    options: [
+      "oldingi state va actionni olib statega melumot qaytaradidan funksiya",
+      "actionni olib actionga melumot qaytaradidan funksiya",
+      "oldingi stateni olib actionga melumot qaytaradidan funksiya",
+    ],
+    answer: "oldingi state va actionni olib statega melumot qaytaradidan funksiya",
   },
 ];
