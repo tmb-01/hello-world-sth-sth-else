@@ -221,7 +221,7 @@ function QuizPage() {
                 }
               )}
             <hr /> */}
-            {/* <h1>JavaScript</h1>
+            <h1>JavaScript</h1>
             {tests
               ?.filter(({ quizCategory }) => quizCategory.category === "Java Script")
               ?.map(
@@ -247,9 +247,9 @@ function QuizPage() {
                     );
                   }
                 }
-              )} */}
+              )}
 
-            <h1>React</h1>
+            {/* <h1>React</h1>
             {tests
               ?.filter(({ quizCategory }) => quizCategory.category === "React")
               ?.map(
@@ -277,7 +277,7 @@ function QuizPage() {
                 }
               )}
 
-<h1>Redux</h1>
+            <h1>Redux</h1>
             {tests
               ?.filter(({ quizCategory }) => quizCategory.category === "Redux")
               ?.map(
@@ -303,7 +303,7 @@ function QuizPage() {
                     );
                   }
                 }
-              )}
+              )} */}
           </TestWrapper>
           <FinishedButton
             process={submitProcess}
