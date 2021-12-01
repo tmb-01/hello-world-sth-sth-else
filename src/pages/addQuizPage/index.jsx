@@ -21,7 +21,7 @@ function AddQuizPage() {
   };
 
   const javaScript = {
-    category: "Java Script",
+    category: "Java_Script",
     quizPayload: javaScriptTest,
   };
 
@@ -96,7 +96,7 @@ function AddQuizPage() {
         </>
       ))} */}
 
-      {/* <h1>
+      <h1>
         {javaScript.quizPayload.length} {javaScript.category}
       </h1>
 
@@ -107,29 +107,29 @@ function AddQuizPage() {
           </h3>
           <ul>
             {options.map((value) => (
-              <li>{value}</li>
+                <li>{value}  {value===answer?<b style={{color:"red"}}>true</b>:""}</li>
             ))}
-             <b>{options.contains(answer)}</b>
+             {/*<b>{options.contains(answer)}</b>*/}
             <b>{answer === "" ? "EMPTY" : answer}</b>
           </ul>
         </>
-      ))} */}
+      ))}
 
-      <h1>
-        {react.quizPayload.length} {react.category}
-      </h1>
-      {react.quizPayload.map(({ question, answer, options }, index) => (
-        <>
-          <h3>
-            {index + 1}) {question}
-          </h3>
-          <ul>
-            {options.map((value) => (
-              <li>{value}</li>
-            ))}
-            <b style={(answer==="")?{color:'red'}:{}}>{answer === "" ? "EMPTY" : answer}</b>
-          </ul>
-        </>
+      {/*<h1>*/}
+      {/*  {react.quizPayload.length} {react.category}*/}
+      {/*</h1>*/}
+      {/*{react.quizPayload.map(({ question, answer, options }, index) => (*/}
+      {/*  <>*/}
+      {/*    <h3>*/}
+      {/*      {index + 1}) {question}*/}
+      {/*    </h3>*/}
+      {/*    <ul>*/}
+      {/*      {options.map((value) => (*/}
+      {/*        <li>{value}</li>*/}
+      {/*      ))}*/}
+      {/*      <b style={(answer==="")?{color:'red'}:{}}>{answer === "" ? "EMPTY" : answer}</b>*/}
+      {/*    </ul>*/}
+      {/*  </>*/}
       ))}
     </Container>
   );

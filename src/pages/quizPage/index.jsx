@@ -81,7 +81,7 @@ function QuizPage() {
 
         const form = {
             user: {
-                firstName: "G2 "+fullName.data.firstName,
+                firstName: "G2 " + fullName.data.firstName,
                 lastName: fullName.data.lastName,
             },
             answers: answersInArray,
@@ -164,69 +164,41 @@ function QuizPage() {
                         {`${fullName.data.firstName} ${fullName.data.lastName}`}
                     </FullName>
                     <TestWrapper>
-                        <h1>HTML</h1>
-                        {tests
-                            .filter(({quizCategory}) => {
-                                console.log(quizCategory.category);
-                                return quizCategory.category === "HTML";
-                            })
-                            .map(({id, question, quizCategory, options, answer}, index) => {
-                                if (index < 30) {
-                                    return (
-                                        <TestBox key={id}>
-                                            <Question>
-                                                {index + 1}) {question}
-                                            </Question>
-                                            {options.map(({id: choiceId, choice}) => (
-                                                <Option key={choiceId}>
-                                                    <input
-                                                        onChange={handleAnswer}
-                                                        type="radio"
-                                                        name={id}
-                                                        value={choiceId}
-                                                    />{" "}
-                                                    {choice}
-                                                </Option>
-                                            ))}
-                                        </TestBox>
-                                    );
-                                }
-                            })}
-                        <hr/>
-                        <h1>CSS</h1>
-                        {tests
-                            ?.filter(({quizCategory}) => quizCategory.category === "CSS")
-                            ?.map(
-                                ({id, question, quizCategory, options, answer}, index) => {
-                                    if (index < 20) {
-                                        return (
-                                            <TestBox key={id}>
-                                                <Question>
-                                                    {index + 1}) {question}
-                                                </Question>
-                                                {options.map(({id: choiceId, choice}) => (
-                                                    <Option key={choiceId}>
-                                                        <input
-                                                            onChange={handleAnswer}
-                                                            type="radio"
-                                                            name={id}
-                                                            value={choiceId}
-                                                        />{" "}
-                                                        {choice}
-                                                    </Option>
-                                                ))}
-                                            </TestBox>
-                                        );
-                                    }
-                                }
-                            )}
-                        <hr/>
-                        {/*<h1>JavaScript</h1>*/}
+                        {/*<h1>HTML</h1>*/}
                         {/*{tests*/}
-                        {/*    ?.filter(({quizCategory}) => quizCategory.category === "Java Script")*/}
+                        {/*    .filter(({quizCategory}) => {*/}
+                        {/*        console.log(quizCategory.category);*/}
+                        {/*        return quizCategory.category === "HTML";*/}
+                        {/*    })*/}
+                        {/*    .map(({id, question, quizCategory, options, answer}, index) => {*/}
+                        {/*        if (index < 30) {*/}
+                        {/*            return (*/}
+                        {/*                <TestBox key={id}>*/}
+                        {/*                    <Question>*/}
+                        {/*                        {index + 1}) {question}*/}
+                        {/*                    </Question>*/}
+                        {/*                    {options.map(({id: choiceId, choice}) => (*/}
+                        {/*                        <Option key={choiceId}>*/}
+                        {/*                            <input*/}
+                        {/*                                onChange={handleAnswer}*/}
+                        {/*                                type="radio"*/}
+                        {/*                                name={id}*/}
+                        {/*                                value={choiceId}*/}
+                        {/*                            />{" "}*/}
+                        {/*                            {choice}*/}
+                        {/*                        </Option>*/}
+                        {/*                    ))}*/}
+                        {/*                </TestBox>*/}
+                        {/*            );*/}
+                        {/*        }*/}
+                        {/*    })}*/}
+                        {/*<hr/>*/}
+                        {/*<h1>CSS</h1>*/}
+                        {/*{tests*/}
+                        {/*    ?.filter(({quizCategory}) => quizCategory.category === "CSS")*/}
                         {/*    ?.map(*/}
                         {/*        ({id, question, quizCategory, options, answer}, index) => {*/}
-                        {/*            if (index < 50) {*/}
+                        {/*            if (index < 20) {*/}
                         {/*                return (*/}
                         {/*                    <TestBox key={id}>*/}
                         {/*                        <Question>*/}
@@ -248,6 +220,30 @@ function QuizPage() {
                         {/*            }*/}
                         {/*        }*/}
                         {/*    )}*/}
+                        {/*<hr/>*/}
+                        <h1>JavaScript</h1>
+                        {tests
+                            ?.filter(({quizCategory}) => quizCategory.category === "Java_Script")
+                            ?.map(
+                                ({id, question, quizCategory, options, answer}, index) => (
+                                    <TestBox key={id}>
+                                        <Question>
+                                            {index + 1}) {question}
+                                        </Question>
+                                        {options.map(({id: choiceId, choice}) => (
+                                            <Option key={choiceId}>
+                                                <input
+                                                    onChange={handleAnswer}
+                                                    type="radio"
+                                                    name={id}
+                                                    value={choiceId}
+                                                />{" "}
+                                                {choice}
+                                            </Option>
+                                        ))}
+                                    </TestBox>
+                                )
+                            )}
 
                         {/* <h1>React</h1>
             {tests
