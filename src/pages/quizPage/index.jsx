@@ -19,6 +19,9 @@ import axios from "axios";
 import timeOutImage from "../../assets/images/timeout.gif";
 import {baseLink} from "../../baselink/baselink";
 
+import {htmlTest} from "../../quizzes/html_uz"
+import {cssTest} from "../../quizzes/css_uz"
+
 function QuizPage() {
     const [fullName, setFullName] = useState({allow: false, data: {}});
     const [tests, setTests] = useState([]);
@@ -36,7 +39,7 @@ function QuizPage() {
             url: `${baseLink}/quiz`,
             headers: {
                 Authorization:
-                    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcGFjZV9hY2FkZW15IiwiaWF0IjoxNjMxNzg4MTAzLCJleHAiOjE2NjMzMjQxMDN9.Rs9VPFUNbhgrMnTV-Urtd7Z5E0NJhQc1sMA_NbgmNNsWockKinNo7j-TrGlzl5_Q-HNf4b2fXarbzUx3ZVXk9w",
+                    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdXBlcl91c2VyIiwiaWF0IjoxNjQzNzE0NjU5LCJleHAiOjE2NzUyNTA2NTl9.yu0TYijUOOO88Wiaq8K33-TBpkT7jMox8kp4-ck8pwlFtPBTcs1GsCs6-S373mrSWbWKPIbfYJq8n4dmPRZ8Iw",
             },
         })
             .then((res) => {
@@ -64,79 +67,79 @@ function QuizPage() {
         console.log(answers);
     };
 
-    const submitQuiz = () => {
-        setSubmitProcess({
-            loading: true,
-            error: false,
-            success: false,
-        });
-        const answersInArray = [];
-        for (const answer in answers) {
-            answersInArray.push({
-                questionId: Number(answer),
-                choiceId: Number(answers[answer]),
-            });
-        }
-        console.log(answersInArray);
+    // const submitQuiz = () => {
+    //     setSubmitProcess({
+    //         loading: true,
+    //         error: false,
+    //         success: false,
+    //     });
+    //     const answersInArray = [];
+    //     for (const answer in answers) {
+    //         answersInArray.push({
+    //             questionId: Number(answer),
+    //             choiceId: Number(answers[answer]),
+    //         });
+    //     }
+    //     console.log(answersInArray);
 
-        const form = {
-            user: {
-                firstName: "G2 " + fullName.data.firstName,
-                lastName: fullName.data.lastName,
-            },
-            answers: answersInArray,
-        };
-        console.log(form);
+    //     const form = {
+    //         user: {
+    //             firstName: "G2 " + fullName.data.firstName,
+    //             lastName: fullName.data.lastName,
+    //         },
+    //         answers: answersInArray,
+    //     };
+    //     console.log(form);
 
-        axios({
-            method: "POST",
-            data: form,
-            url: `${baseLink}/quiz/submit-answer-of-user`,
-            headers: {
-                Authorization:
-                    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcGFjZV9hY2FkZW15IiwiaWF0IjoxNjMxNzg4MTAzLCJleHAiOjE2NjMzMjQxMDN9.Rs9VPFUNbhgrMnTV-Urtd7Z5E0NJhQc1sMA_NbgmNNsWockKinNo7j-TrGlzl5_Q-HNf4b2fXarbzUx3ZVXk9w",
-            },
-        })
-            .then((res) => {
-                setSubmitProcess({
-                    loading: false,
-                    error: false,
-                    success: true,
-                });
-            })
-            .catch((err) => {
-                setSubmitProcess({
-                    loading: false,
-                    error: true,
-                    success: false,
-                });
-            })
-        // .finally(() => {
-        //   setTimeout(() => {
-        //     setSubmitProcess({
-        //       loading: false,
-        //       error: false,
-        //       success: false,
-        //     });
-        //   }, 3000);
-        // });
-    };
+    //     axios({
+    //         method: "POST",
+    //         data: form,
+    //         url: `${baseLink}/quiz/submit-answer-of-user`,
+    //         headers: {
+    //             Authorization:
+    //                 "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzcGFjZV9hY2FkZW15IiwiaWF0IjoxNjMxNzg4MTAzLCJleHAiOjE2NjMzMjQxMDN9.Rs9VPFUNbhgrMnTV-Urtd7Z5E0NJhQc1sMA_NbgmNNsWockKinNo7j-TrGlzl5_Q-HNf4b2fXarbzUx3ZVXk9w",
+    //         },
+    //     })
+    //         .then((res) => {
+    //             setSubmitProcess({
+    //                 loading: false,
+    //                 error: false,
+    //                 success: true,
+    //             });
+    //         })
+    //         .catch((err) => {
+    //             setSubmitProcess({
+    //                 loading: false,
+    //                 error: true,
+    //                 success: false,
+    //             });
+    //         })
+    //     // .finally(() => {
+    //     //   setTimeout(() => {
+    //     //     setSubmitProcess({
+    //     //       loading: false,
+    //     //       error: false,
+    //     //       success: false,
+    //     //     });
+    //     //   }, 3000);
+    //     // });
+    // };
 
-    const submitFullName = (e) => {
-        e.preventDefault();
-        const {firstName, lastName} = e.target;
-        setFullName({
-            allow: true,
-            data: {
-                firstName: firstName.value,
-                lastName: lastName.value,
-            },
-        });
-    };
+    // const submitFullName = (e) => {
+    //     e.preventDefault();
+    //     const {firstName, lastName} = e.target;
+    //     setFullName({
+    //         allow: true,
+    //         data: {
+    //             firstName: firstName.value,
+    //             lastName: lastName.value,
+    //         },
+    //     });
+    // };
 
     return (
         <div>
-            {!fullName.allow ? (
+            {/* {!fullName.allow ? (
                 <FullNameInputWrapper>
                     <FullNameInputBox onSubmit={submitFullName}>
                         <input
@@ -154,7 +157,7 @@ function QuizPage() {
                         <button>start test</button>
                     </FullNameInputBox>
                 </FullNameInputWrapper>
-            ) : (
+            ) : ( */}
                 <>
                     <Logo>
                         <LogoIcon/>
@@ -164,63 +167,63 @@ function QuizPage() {
                         {`${fullName.data.firstName} ${fullName.data.lastName}`}
                     </FullName>
                     <TestWrapper>
-                        {/*<h1>HTML</h1>*/}
-                        {/*{tests*/}
-                        {/*    .filter(({quizCategory}) => {*/}
-                        {/*        console.log(quizCategory.category);*/}
-                        {/*        return quizCategory.category === "HTML";*/}
-                        {/*    })*/}
-                        {/*    .map(({id, question, quizCategory, options, answer}, index) => {*/}
-                        {/*        if (index < 30) {*/}
-                        {/*            return (*/}
-                        {/*                <TestBox key={id}>*/}
-                        {/*                    <Question>*/}
-                        {/*                        {index + 1}) {question}*/}
-                        {/*                    </Question>*/}
-                        {/*                    {options.map(({id: choiceId, choice}) => (*/}
-                        {/*                        <Option key={choiceId}>*/}
-                        {/*                            <input*/}
-                        {/*                                onChange={handleAnswer}*/}
-                        {/*                                type="radio"*/}
-                        {/*                                name={id}*/}
-                        {/*                                value={choiceId}*/}
-                        {/*                            />{" "}*/}
-                        {/*                            {choice}*/}
-                        {/*                        </Option>*/}
-                        {/*                    ))}*/}
-                        {/*                </TestBox>*/}
-                        {/*            );*/}
-                        {/*        }*/}
-                        {/*    })}*/}
-                        {/*<hr/>*/}
-                        {/*<h1>CSS</h1>*/}
-                        {/*{tests*/}
-                        {/*    ?.filter(({quizCategory}) => quizCategory.category === "CSS")*/}
-                        {/*    ?.map(*/}
-                        {/*        ({id, question, quizCategory, options, answer}, index) => {*/}
-                        {/*            if (index < 20) {*/}
-                        {/*                return (*/}
-                        {/*                    <TestBox key={id}>*/}
-                        {/*                        <Question>*/}
-                        {/*                            {index + 1}) {question}*/}
-                        {/*                        </Question>*/}
-                        {/*                        {options.map(({id: choiceId, choice}) => (*/}
-                        {/*                            <Option key={choiceId}>*/}
-                        {/*                                <input*/}
-                        {/*                                    onChange={handleAnswer}*/}
-                        {/*                                    type="radio"*/}
-                        {/*                                    name={id}*/}
-                        {/*                                    value={choiceId}*/}
-                        {/*                                />{" "}*/}
-                        {/*                                {choice}*/}
-                        {/*                            </Option>*/}
-                        {/*                        ))}*/}
-                        {/*                    </TestBox>*/}
-                        {/*                );*/}
-                        {/*            }*/}
-                        {/*        }*/}
-                        {/*    )}*/}
-                        {/*<hr/>*/}
+                         <h1>HTML</h1>
+                        {htmlTest
+                            // .filter(({quizCategory}) => {
+                            //     console.log(quizCategory.category);
+                            //     return quizCategory.category === "HTML";
+                            // })
+                            .map(({id, question, quizCategory, options, answer}, index) => {
+                                if (index < 30) {
+                                    return (
+                                        <TestBox key={id}>
+                                            <Question>
+                                                {index + 1}) {question}
+                                            </Question>
+                                            {options.map((value,oIndex) => (
+                                                <Option key={oIndex}>
+                                                    <input
+                                                        onChange={handleAnswer}
+                                                        type="radio"
+                                                        name={index}
+                                                        value={value}
+                                                    />{" "}
+                                                    {value}
+                                                </Option>
+                                            ))}
+                                        </TestBox>
+                                    );
+                                }
+                            })}
+                        <hr/>
+                        <h1>CSS</h1>
+                        {cssTest
+                            // ?.filter(({quizCategory}) => quizCategory.category === "CSS")
+                            ?.map(
+                                ({id, question, quizCategory, options, answer}, index) => {
+                                    if (index < 20) {
+                                        return (
+                                            <TestBox key={id}>
+                                                <Question>
+                                                    {index + 1}) {question}
+                                                </Question>
+                                                {options.map((value,oIndex) => (
+                                                    <Option key={oIndex}>
+                                                        <input
+                                                            onChange={handleAnswer}
+                                                            type="radio"
+                                                            name={index}
+                                                            value={value}
+                                                        />{" "}
+                                                        {value}
+                                                    </Option>
+                                                ))}
+                                            </TestBox>
+                                        );
+                                    }
+                                }
+                            )}
+                        <hr/>
                         {/*<h1>JavaScript</h1>*/}
                         {/*{tests*/}
                         {/*    ?.filter(({quizCategory}) => quizCategory.category === "Java_Script")*/}
@@ -245,7 +248,7 @@ function QuizPage() {
                         {/*        )*/}
                         {/*    )}*/}
 
-                        <h1>React</h1>
+                        {/* <h1>React</h1>
                         {tests
                             ?.filter(({quizCategory}) => quizCategory.category === "React")
                             ?.map(
@@ -299,9 +302,9 @@ function QuizPage() {
                                         );
                                     }
                                 }
-                            )}
+                            )} */}
                     </TestWrapper>
-                    <FinishedButton
+                    {/* <FinishedButton
                         process={submitProcess}
                         disabled={
                             submitProcess.loading ||
@@ -319,10 +322,9 @@ function QuizPage() {
                         ) : (
                             "Finished"
                         )}
-                        {/* Finished */}
-                    </FinishedButton>
+                    </FinishedButton> */}
                     <Timer setTimeOut={setTimeOut}/>
-                    {timeOut ? (
+                    {/* {timeOut ? (
                         <TimeOut>
                             <img
                                 onDoubleClick={() => setTimeOut(false)}
@@ -332,9 +334,9 @@ function QuizPage() {
                         </TimeOut>
                     ) : (
                         ""
-                    )}
+                    )} */}
                 </>
-            )}
+            {/* )} */}
         </div>
     );
 }

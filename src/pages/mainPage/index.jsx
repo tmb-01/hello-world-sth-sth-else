@@ -34,7 +34,7 @@ function MainPage() {
                     {/*<AddQuizPage/>*/}
                 </Route>
                 <Route path="/quiz-users-page">
-                    {/*<QuizUsers/>*/}
+                    <QuizUsers/>
                 </Route>
             </Switch>
         </BrowserRouter>
