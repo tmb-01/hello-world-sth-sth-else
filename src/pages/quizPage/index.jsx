@@ -21,6 +21,7 @@ import {baseLink} from "../../baselink/baselink";
 
 import {htmlTest} from "../../quizzes/html_uz"
 import {cssTest} from "../../quizzes/css_uz"
+import {javaScriptTest} from "../../quizzes/javaScript_uz";
 
 function QuizPage() {
     const [fullName, setFullName] = useState({allow: false, data: {}});
@@ -167,86 +168,86 @@ function QuizPage() {
                         {`${fullName.data.firstName} ${fullName.data.lastName}`}
                     </FullName>
                     <TestWrapper>
-                         <h1>HTML</h1>
-                        {htmlTest
-                            // .filter(({quizCategory}) => {
-                            //     console.log(quizCategory.category);
-                            //     return quizCategory.category === "HTML";
-                            // })
-                            .map(({id, question, quizCategory, options, answer}, index) => {
-                                if (index < 30) {
-                                    return (
-                                        <TestBox key={id}>
-                                            <Question>
-                                                {index + 1}) {question}
-                                            </Question>
-                                            {options.map((value,oIndex) => (
-                                                <Option key={oIndex}>
-                                                    <input
-                                                        onChange={handleAnswer}
-                                                        type="radio"
-                                                        name={index}
-                                                        value={value}
-                                                    />{" "}
-                                                    {value}
-                                                </Option>
-                                            ))}
-                                        </TestBox>
-                                    );
-                                }
-                            })}
-                        <hr/>
-                        <h1>CSS</h1>
-                        {cssTest
-                            // ?.filter(({quizCategory}) => quizCategory.category === "CSS")
-                            ?.map(
-                                ({id, question, quizCategory, options, answer}, index) => {
-                                    if (index < 20) {
-                                        return (
-                                            <TestBox key={id}>
-                                                <Question>
-                                                    {index + 1}) {question}
-                                                </Question>
-                                                {options.map((value,oIndex) => (
-                                                    <Option key={oIndex}>
-                                                        <input
-                                                            onChange={handleAnswer}
-                                                            type="radio"
-                                                            name={index}
-                                                            value={value}
-                                                        />{" "}
-                                                        {value}
-                                                    </Option>
-                                                ))}
-                                            </TestBox>
-                                        );
-                                    }
-                                }
-                            )}
-                        <hr/>
-                        {/*<h1>JavaScript</h1>*/}
-                        {/*{tests*/}
-                        {/*    ?.filter(({quizCategory}) => quizCategory.category === "Java_Script")*/}
+                        {/* <h1>HTML</h1>*/}
+                        {/*{htmlTest*/}
+                        {/*    // .filter(({quizCategory}) => {*/}
+                        {/*    //     console.log(quizCategory.category);*/}
+                        {/*    //     return quizCategory.category === "HTML";*/}
+                        {/*    // })*/}
+                        {/*    .map(({id, question, quizCategory, options, answer}, index) => {*/}
+                        {/*        if (index < 30) {*/}
+                        {/*            return (*/}
+                        {/*                <TestBox key={id}>*/}
+                        {/*                    <Question>*/}
+                        {/*                        {index + 1}) {question}*/}
+                        {/*                    </Question>*/}
+                        {/*                    {options.map((value,oIndex) => (*/}
+                        {/*                        <Option key={oIndex}>*/}
+                        {/*                            <input*/}
+                        {/*                                onChange={handleAnswer}*/}
+                        {/*                                type="radio"*/}
+                        {/*                                name={index}*/}
+                        {/*                                value={value}*/}
+                        {/*                            />{" "}*/}
+                        {/*                            {value}*/}
+                        {/*                        </Option>*/}
+                        {/*                    ))}*/}
+                        {/*                </TestBox>*/}
+                        {/*            );*/}
+                        {/*        }*/}
+                        {/*    })}*/}
+                        {/*<hr/>*/}
+                        {/*<h1>CSS</h1>*/}
+                        {/*{cssTest*/}
+                        {/*    // ?.filter(({quizCategory}) => quizCategory.category === "CSS")*/}
                         {/*    ?.map(*/}
-                        {/*        ({id, question, quizCategory, options, answer}, index) => (*/}
-                        {/*            <TestBox key={id}>*/}
-                        {/*                <Question>*/}
-                        {/*                    {index + 1}) {question}*/}
-                        {/*                </Question>*/}
-                        {/*                {options.map(({id: choiceId, choice}) => (*/}
-                        {/*                    <Option key={choiceId}>*/}
-                        {/*                        <input*/}
-                        {/*                            onChange={handleAnswer}*/}
-                        {/*                            type="radio"*/}
-                        {/*                            name={id}*/}
-                        {/*                            value={choiceId}*/}
-                        {/*                        />{" "}*/}
-                        {/*                        {choice}*/}
-                        {/*                    </Option>*/}
-                        {/*                ))}*/}
-                        {/*            </TestBox>*/}
-                        {/*        )*/}
+                        {/*        ({id, question, quizCategory, options, answer}, index) => {*/}
+                        {/*            if (index < 20) {*/}
+                        {/*                return (*/}
+                        {/*                    <TestBox key={id}>*/}
+                        {/*                        <Question>*/}
+                        {/*                            {index + 1}) {question}*/}
+                        {/*                        </Question>*/}
+                        {/*                        {options.map((value,oIndex) => (*/}
+                        {/*                            <Option key={oIndex}>*/}
+                        {/*                                <input*/}
+                        {/*                                    onChange={handleAnswer}*/}
+                        {/*                                    type="radio"*/}
+                        {/*                                    name={index}*/}
+                        {/*                                    value={value}*/}
+                        {/*                                />{" "}*/}
+                        {/*                                {value}*/}
+                        {/*                            </Option>*/}
+                        {/*                        ))}*/}
+                        {/*                    </TestBox>*/}
+                        {/*                );*/}
+                        {/*            }*/}
+                        {/*        }*/}
                         {/*    )}*/}
+                        {/*<hr/>*/}
+                        <h1>JavaScript</h1>
+                        {javaScriptTest
+                            // ?.filter(({quizCategory}) => quizCategory.category === "Java_Script")
+                            ?.map(
+                                ({id, question, quizCategory, options, answer}, index) => (
+                                    <TestBox key={id}>
+                                        <Question>
+                                            {index + 1}) {question}
+                                        </Question>
+                                        {options.map((value,oIndex) => (
+                                            <Option key={oIndex}>
+                                                <input
+                                                    onChange={handleAnswer}
+                                                    type="radio"
+                                                    name={index}
+                                                    value={value}
+                                                />{" "}
+                                                {value}
+                                            </Option>
+                                        ))}
+                                    </TestBox>
+                                )
+                            )}
 
                         {/* <h1>React</h1>
                         {tests
