@@ -22,6 +22,8 @@ import {baseLink} from "../../baselink/baselink";
 import {htmlTest} from "../../quizzes/html_uz"
 import {cssTest} from "../../quizzes/css_uz"
 import {javaScriptTest} from "../../quizzes/javaScript_uz";
+import {reactTest,reduxTest} from "../../quizzes/react_uz";
+
 
 function QuizPage() {
     const [fullName, setFullName] = useState({allow: false, data: {}});
@@ -225,33 +227,33 @@ function QuizPage() {
                         {/*        }*/}
                         {/*    )}*/}
                         {/*<hr/>*/}
-                        <h1>JavaScript</h1>
-                        {javaScriptTest
-                            // ?.filter(({quizCategory}) => quizCategory.category === "Java_Script")
-                            ?.map(
-                                ({id, question, quizCategory, options, answer}, index) => (
-                                    <TestBox key={id}>
-                                        <Question>
-                                            {index + 1}) {question}
-                                        </Question>
-                                        {options.map((value,oIndex) => (
-                                            <Option key={oIndex}>
-                                                <input
-                                                    onChange={handleAnswer}
-                                                    type="radio"
-                                                    name={index}
-                                                    value={value}
-                                                />{" "}
-                                                {value}
-                                            </Option>
-                                        ))}
-                                    </TestBox>
-                                )
-                            )}
+                        {/*<h1>JavaScript</h1>*/}
+                        {/*{javaScriptTest*/}
+                        {/*    // ?.filter(({quizCategory}) => quizCategory.category === "Java_Script")*/}
+                        {/*    ?.map(*/}
+                        {/*        ({id, question, quizCategory, options, answer}, index) => (*/}
+                        {/*            <TestBox key={id}>*/}
+                        {/*                <Question>*/}
+                        {/*                    {index + 1}) {question}*/}
+                        {/*                </Question>*/}
+                        {/*                {options.map((value,oIndex) => (*/}
+                        {/*                    <Option key={oIndex}>*/}
+                        {/*                        <input*/}
+                        {/*                            onChange={handleAnswer}*/}
+                        {/*                            type="radio"*/}
+                        {/*                            name={index}*/}
+                        {/*                            value={value}*/}
+                        {/*                        />{" "}*/}
+                        {/*                        {value}*/}
+                        {/*                    </Option>*/}
+                        {/*                ))}*/}
+                        {/*            </TestBox>*/}
+                        {/*        )*/}
+                        {/*    )}*/}
 
-                        {/* <h1>React</h1>
-                        {tests
-                            ?.filter(({quizCategory}) => quizCategory.category === "React")
+                        <h1>React</h1>
+                        {reactTest
+                            // ?.filter(({quizCategory}) => quizCategory.category === "React")
                             ?.map(
                                 ({id, question, quizCategory, options, answer}, index) => {
                                     if (index < 30) {
@@ -260,15 +262,15 @@ function QuizPage() {
                                                 <Question>
                                                     {index + 1}) {question}
                                                 </Question>
-                                                {options.map(({id: choiceId, choice}) => (
-                                                    <Option key={choiceId}>
+                                                {options.map((value,oIndex) => (
+                                                    <Option key={oIndex}>
                                                         <input
                                                             onChange={handleAnswer}
                                                             type="radio"
-                                                            name={id}
-                                                            value={choiceId}
+                                                            name={index}
+                                                            value={value}
                                                         />{" "}
-                                                        {choice}
+                                                        {value}
                                                     </Option>
                                                 ))}
                                             </TestBox>
@@ -278,8 +280,8 @@ function QuizPage() {
                             )}
 
                         <h1>Redux</h1>
-                        {tests
-                            ?.filter(({quizCategory}) => quizCategory.category === "Redux")
+                        {reduxTest
+                            // ?.filter(({quizCategory}) => quizCategory.category === "Redux")
                             ?.map(
                                 ({id, question, quizCategory, options, answer}, index) => {
                                     if (index < 50) {
@@ -288,22 +290,22 @@ function QuizPage() {
                                                 <Question>
                                                     {index + 1}) {question}
                                                 </Question>
-                                                {options.map(({id: choiceId, choice}) => (
-                                                    <Option key={choiceId}>
+                                                {options.map((value,oIndex) => (
+                                                    <Option key={oIndex}>
                                                         <input
                                                             onChange={handleAnswer}
                                                             type="radio"
-                                                            name={id}
-                                                            value={choiceId}
+                                                            name={index}
+                                                            value={value}
                                                         />{" "}
-                                                        {choice}
+                                                        {value}
                                                     </Option>
                                                 ))}
                                             </TestBox>
                                         );
                                     }
                                 }
-                            )} */}
+                            )}
                     </TestWrapper>
                     {/* <FinishedButton
                         process={submitProcess}
